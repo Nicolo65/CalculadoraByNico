@@ -6,7 +6,7 @@ namespace CalculadoraByNico
         /// <summary>
         /// Variable del diseñador necesaria.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        public System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Limpiar los recursos que se estén usando.
@@ -27,7 +27,7 @@ namespace CalculadoraByNico
         /// Método necesario para admitir el Diseñador. No se puede modificar
         /// el contenido de este método con el editor de código.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             this.txtBox = new System.Windows.Forms.TextBox();
             this.btnSuma = new System.Windows.Forms.Button();
@@ -60,6 +60,7 @@ namespace CalculadoraByNico
             this.txtBox.Size = new System.Drawing.Size(233, 40);
             this.txtBox.TabIndex = 0;
             this.txtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBox.TextChanged += new System.EventHandler(this.txtBox_TextChanged);
             // 
             // btnSuma
             // 
@@ -311,24 +312,24 @@ namespace CalculadoraByNico
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtBox;
-        private System.Windows.Forms.Button btnSuma;
-        private System.Windows.Forms.Button btn7;
-        private System.Windows.Forms.Button btn8;
-        private System.Windows.Forms.Button btn9;
-        private System.Windows.Forms.Button btn4;
-        private System.Windows.Forms.Button btn5;
-        private System.Windows.Forms.Button btn6;
-        private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.Button btn2;
-        private System.Windows.Forms.Button btn3;
-        private System.Windows.Forms.Button btnPoint;
-        private System.Windows.Forms.Button btn0;
-        private System.Windows.Forms.Button btnIgual;
-        private System.Windows.Forms.Button btnResta;
-        private System.Windows.Forms.Button btnMulti;
-        private System.Windows.Forms.Button btnDiv;
-        private System.Windows.Forms.Button btnClear;
+        public System.Windows.Forms.TextBox txtBox;
+        public System.Windows.Forms.Button btnSuma;
+        public System.Windows.Forms.Button btn7;
+        public System.Windows.Forms.Button btn8;
+        public System.Windows.Forms.Button btn9;
+        public System.Windows.Forms.Button btn4;
+        public System.Windows.Forms.Button btn5;
+        public System.Windows.Forms.Button btn6;
+        public System.Windows.Forms.Button btn1;
+        public System.Windows.Forms.Button btn2;
+        public System.Windows.Forms.Button btn3;
+        public System.Windows.Forms.Button btnPoint;
+        public System.Windows.Forms.Button btn0;
+        public System.Windows.Forms.Button btnIgual;
+        public System.Windows.Forms.Button btnResta;
+        public System.Windows.Forms.Button btnMulti;
+        public System.Windows.Forms.Button btnDiv;
+        public System.Windows.Forms.Button btnClear;
     }
 }
 

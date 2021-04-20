@@ -12,13 +12,14 @@ namespace CalculadoraByNico
 {
     public partial class Form1 : Form
     {
+        /*
+        public double valor1;
+        public double valor2;
+      //  public int operacion;
 
-        private double valor1;
-        private double valor2;
-
-        private double resultado;
-
-        private int operacion;
+        public double resultado;
+        */
+        
 
         public Form1()
         {
@@ -26,159 +27,157 @@ namespace CalculadoraByNico
         }
 
 
-        private void btn0_Click(object sender, EventArgs e)
+        public void btn0_Click(object sender, EventArgs e)
         {
             //Numero 0
 
-            txtBox.Text = txtBox.Text + "0";
+            eventBtm("0");
 
 
         }
 
-        private void btn1_Click(object sender, EventArgs e)
+        public void btn1_Click(object sender, EventArgs e)
         {
             //Numero 1
 
-            txtBox.Text = txtBox.Text + "1";
+            eventBtm("1");
         }
 
-        private void btn2_Click(object sender, EventArgs e)
+        public void btn2_Click(object sender, EventArgs e)
         {
             //Numero 2
 
-            txtBox.Text = txtBox.Text + "2";
+            eventBtm("2");
         }
 
-        private void btn3_Click(object sender, EventArgs e)
+        public void btn3_Click(object sender, EventArgs e)
         {
             //Numero 3
 
-            txtBox.Text = txtBox.Text + "3";
+            eventBtm("3");
 
         }
 
-        private void btn4_Click(object sender, EventArgs e)
+        public void btn4_Click(object sender, EventArgs e)
         {
             //Numero 4
 
-            txtBox.Text = txtBox.Text + "4";
+            eventBtm("4");
 
         }
 
-        private void btn5_Click(object sender, EventArgs e)
+        public void btn5_Click(object sender, EventArgs e)
         {
 
             //Numero 5
 
-            txtBox.Text = txtBox.Text + "5";
+            eventBtm("5");
 
         }
 
-        private void btn6_Click(object sender, EventArgs e)
+        public void btn6_Click(object sender, EventArgs e)
         {
 
             //Numero 6
 
-            txtBox.Text = txtBox.Text + "6";
+            eventBtm("6");
 
         }
 
-        private void btn7_Click(object sender, EventArgs e)
+        public void btn7_Click(object sender, EventArgs e)
         {
             //Numero 7
 
-            txtBox.Text = txtBox.Text + "7";
+            eventBtm("7");
 
 
         }
 
-        private void btn8_Click(object sender, EventArgs e)
+        public void btn8_Click(object sender, EventArgs e)
         {
 
             //Numero 8
 
-            txtBox.Text = txtBox.Text + "8";
+            eventBtm("8"); 
 
         }
 
-        private void btn9_Click(object sender, EventArgs e)
+        public void btn9_Click(object sender, EventArgs e)
         {
 
             //Numero 9
 
-            txtBox.Text = txtBox.Text + "9";
+            eventBtm("9");
 
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
+        public void btnClear_Click(object sender, EventArgs e)
         {
             //Limpiar
 
             txtBox.Text = "";
+
         }
 
-        private void btnIgual_Click(object sender, EventArgs e)
+        public void btnIgual_Click(object sender, EventArgs e)
         {
             //Igual
 
-            valor2 = Convert.ToDouble(txtBox.Text);
-
-            switch (operacion)
-            {
-                case 1: resultado = valor1 + valor2; break;
-                case 2: resultado = valor1 - valor2; break;
-                case 3: resultado = valor1 * valor2; break;
-                case 4: resultado = valor1 / valor2; break;
-            }
-
-
-            txtBox.Text = resultado.ToString();
+            Metodos oIgual = new Metodos();
+            oIgual.igual();
             
         }
 
-        private void btnSuma_Click(object sender, EventArgs e)
+        public void btnSuma_Click(object sender, EventArgs e)
         {
             //Suma
 
-            operacion = 1;
-            valor1 = Convert.ToDouble(txtBox.Text);
-            txtBox.Text = "";
+            Metodos oSuma = new Metodos();
+            oSuma.suma(1);
+            
         }
 
-        private void btnResta_Click(object sender, EventArgs e)
+        public void btnResta_Click(object sender, EventArgs e)
         {
             //Resta
 
-            operacion = 2;
-            valor1 = Convert.ToDouble(txtBox.Text);
-            txtBox.Text = "";
+            Metodos oResta = new Metodos();
+            oResta.resta(2);
 
         }
 
-        private void btnMulti_Click(object sender, EventArgs e)
+        public void btnMulti_Click(object sender, EventArgs e)
         {
             //Multilplicacion
 
-            operacion = 3;
-            valor1 = Convert.ToDouble(txtBox.Text);
-            txtBox.Text = "";
+            Metodos oMultiplicacion = new Metodos();
+            oMultiplicacion.multi(3);
 
         }
 
-        private void btnDiv_Click(object sender, EventArgs e)
+        public void btnDiv_Click(object sender, EventArgs e)
         {
             //Division
 
-            operacion = 4;
-            valor1 = Convert.ToDouble(txtBox.Text);
-            txtBox.Text = "";
+            Metodos oDiv = new Metodos();
+            oDiv.div(4);
         }
 
-        private void btnPoint_Click(object sender, EventArgs e)
+        public void btnPoint_Click(object sender, EventArgs e)
         {
             //Punto
 
-            txtBox.Text = txtBox.Text + ".";
+            eventBtm(".");
+
+        }
+
+        public void eventBtm(string btm)
+        {
+            txtBox.Text = txtBox.Text + btm;
+        }
+
+        public void txtBox_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
