@@ -10,15 +10,58 @@ namespace CalculadoraByNico
     class Metodos : Form1
     {
 
-        public double currentOperator { get; set; }
-        public double valor1 { get; set; }
-        public double valor2 { get; set; }
-        public double resultado { get; set; }
-   
+        private int currentOperator { get; set; }
+        private double valor1 { get; set; }
+        private double valor2 { get; set; }
+        private double resultado { get; set; }
 
-        public void suma(double op)
+
+        // Modificadores
+
+        public void setSuma1(double valor1)
         {
-            //suma
+            this.currentOperator = 1;
+            this.valor1 = Convert.ToDouble(txtBox.Text);
+            txtBox.Text = "";
+
+        }
+
+        public void setSuma2(double valor2)
+        {
+            this.valor2 = Convert.ToDouble(txtBox.Text);
+        }
+
+     
+        //Operacion 
+
+        public void crrnOperation()
+        {
+            switch (currentOperator)
+            {
+                case 1: resultado = this.valor1 + this.valor2; break;
+                case 2: resultado = this.valor1 - this.valor2; break;
+                case 3: resultado = this.valor1 * this.valor2; break;
+                case 4: resultado = this.valor1 / this.valor2; break;
+            }
+
+            this.resultado.ToString();
+
+        }
+
+        /*
+        //Imprimir Resultado
+        public string getResultado()
+        {
+            return resultado.ToString();
+        }
+        */
+        
+
+        /*
+        public void suma(double op, double)
+        {
+            //suma                         
+
             this.currentOperator = op;
             this.valor1 = Convert.ToDouble(txtBox.Text);
             txtBox.Text = "";
@@ -27,7 +70,7 @@ namespace CalculadoraByNico
 
         public void resta(double op)
         {
-            //Resta
+            //Resta                                         
             currentOperator = op;
             valor1 = Convert.ToDouble(txtBox.Text);
             txtBox.Text = "";
@@ -67,7 +110,7 @@ namespace CalculadoraByNico
 
         }
 
-
+        */
 
     }
 }

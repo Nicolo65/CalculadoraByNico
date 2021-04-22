@@ -124,8 +124,8 @@ namespace CalculadoraByNico
             //Igual
 
             Metodos oIgual = new Metodos();
-            oIgual.igual();
-            
+            oIgual.crrnOperation();
+
         }
 
         public void btnSuma_Click(object sender, EventArgs e)
@@ -133,7 +133,10 @@ namespace CalculadoraByNico
             //Suma
 
             Metodos oSuma = new Metodos();
-            oSuma.suma(1);
+            oSuma.setSuma1(Convert.ToDouble(txtBox.Text));
+            oSuma.setSuma2(Convert.ToDouble(txtBox.Text));
+          
+            
             
             
         }
@@ -142,8 +145,7 @@ namespace CalculadoraByNico
         {
             //Resta
 
-            Metodos oResta = new Metodos();
-            oResta.resta(2);
+            
 
         }
 
@@ -151,8 +153,7 @@ namespace CalculadoraByNico
         {
             //Multilplicacion
 
-            Metodos oMultiplicacion = new Metodos();
-            oMultiplicacion.multi(3);
+         
 
         }
 
@@ -160,8 +161,7 @@ namespace CalculadoraByNico
         {
             //Division
 
-            Metodos oDiv = new Metodos();
-            oDiv.div(4);
+            
         }
 
         public void btnPoint_Click(object sender, EventArgs e)
@@ -171,14 +171,16 @@ namespace CalculadoraByNico
             eventBtm(".");
 
         }
-
+        
         public void eventBtm(string btm)
         {
             txtBox.Text = txtBox.Text + btm;
         }
-
+        
         public void txtBox_TextChanged(object sender, EventArgs e)
         {
+      
+
 
         }
     }
