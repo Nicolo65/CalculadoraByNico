@@ -15,7 +15,7 @@ namespace CalculadoraByNico
         /*
         public double valor1;
         public double valor2;
-      //  public int operacion;
+        public int operacion;
 
         public double resultado;
         */
@@ -134,6 +134,7 @@ namespace CalculadoraByNico
 
             Metodos oSuma = new Metodos();
             oSuma.suma(1);
+            
             
         }
 

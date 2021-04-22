@@ -14,12 +14,13 @@ namespace CalculadoraByNico
         public double valor1 { get; set; }
         public double valor2 { get; set; }
         public double resultado { get; set; }
+   
 
         public void suma(double op)
         {
             //suma
-            currentOperator = op;
-            valor1 = Convert.ToDouble(txtBox.Text);
+            this.currentOperator = op;
+            this.valor1 = Convert.ToDouble(txtBox.Text);
             txtBox.Text = "";
 
         }
@@ -45,7 +46,7 @@ namespace CalculadoraByNico
         {
             //Division
             currentOperator = op;
-            valor1 = Convert.ToDouble(txtBox);
+            valor1 = Convert.ToDouble(txtBox.Text);
             txtBox.Text = "";
         }
 
@@ -53,16 +54,16 @@ namespace CalculadoraByNico
         {
             valor2 = Convert.ToDouble(txtBox.Text);
 
-            switch (currentOperator)
+            switch (this.currentOperator)
             {
-                case 1: resultado = valor1 + valor2; break;
-                case 2: resultado = valor1 - valor2; break;
-                case 3: resultado = valor1 * valor2; break;
-                case 4: resultado = valor1 / valor2; break;
+                case 1: this.resultado = this.valor1 +this.valor2; break;
+                case 2: this.resultado = this.valor1 - this.valor2; break;
+                case 3: this.resultado = this.valor1 * this.valor2; break;
+                case 4: this.resultado = this.valor1 / this.valor2; break;
             }
 
 
-             txtBox.Text = resultado.ToString();
+             txtBox.Text = this.resultado.ToString();
 
         }
 
