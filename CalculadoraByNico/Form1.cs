@@ -8,18 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace CalculadoraByNico
 {
     public partial class Form1 : Form
     {
-        /*
-        public double valor1;
-        public double valor2;
-        public int operacion;
-
-        public double resultado;
-        */
-        
+        Calc calculadora = new Calc();
 
         public Form1()
         {
@@ -123,8 +117,9 @@ namespace CalculadoraByNico
         {
             //Igual
 
-            Metodos oIgual = new Metodos();
-            oIgual.crrnOperation();
+            calculadora.valor2 = Convert.ToDouble(txtBox.Text);
+           txtBox.Text = calculadora.crrnOperation(calculadora.typeOperation, calculadora.valor1, calculadora.valor2);
+
 
         }
 
@@ -132,20 +127,20 @@ namespace CalculadoraByNico
         {
             //Suma
 
-            Metodos oSuma = new Metodos();
-            oSuma.setSuma1(Convert.ToDouble(txtBox.Text));
-            oSuma.setSuma2(Convert.ToDouble(txtBox.Text));
-          
-            
-            
-            
+
+            calculadora.valor1 = Convert.ToDouble(txtBox.Text);
+            calculadora.typeOperation = 1;
+            txtBox.Clear();
+  
         }
 
         public void btnResta_Click(object sender, EventArgs e)
         {
             //Resta
 
-            
+            calculadora.valor1 = Convert.ToDouble(txtBox.Text);
+            calculadora.typeOperation = 2;
+            txtBox.Clear();
 
         }
 
@@ -153,7 +148,9 @@ namespace CalculadoraByNico
         {
             //Multilplicacion
 
-         
+            calculadora.valor1 = Convert.ToDouble(txtBox.Text);
+            calculadora.typeOperation = 3;
+            txtBox.Clear();
 
         }
 
@@ -161,7 +158,10 @@ namespace CalculadoraByNico
         {
             //Division
 
-            
+            calculadora.valor1 = Convert.ToDouble(txtBox.Text);
+            calculadora.typeOperation = 4;
+            txtBox.Clear();
+
         }
 
         public void btnPoint_Click(object sender, EventArgs e)
